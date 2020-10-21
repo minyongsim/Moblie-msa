@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+#wrap {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+#header {
+    background: #000;
+    height: 130px;
+    display: flex;
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+}
+
+#header .open_nav {
+    width: 10%;
+    padding: 10px 20px;
+    font-size: 40px;
+    z-index: 999;
+    
+}
+
+#header .close_nav {
+    width: 10%;
+    padding: 10px 20px;
+    font-size: 40px;
+    z-index: 999;
+    display: none;
+}
+
+#header .logo {
+    width: 90%;
+    padding: 10px 0;
+    font-size: 40px;
+    font-family: 'Fredoka One', cursive;
+}
+
+#header .search {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    padding: 10px;
+
+}
+
+#header .search input {
+    width: 85%;
+    height: 30px;
+}
+
+#header .search button {
+    width: 10%;
+    height: 30px;
+}
+
+#header .menubox .menuinv  {
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    left: -400px;
+}
+#header .menubox .menuinv a {
+    display: block;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+}
