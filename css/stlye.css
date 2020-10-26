@@ -23,151 +23,227 @@
     #onlyMobile {
         display: none;
     }
-    }
+}
 
-    #header {
-        height: 130px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-    }
-
-
-    #header .row {
-        max-width: 800px;
-        margin: 0 auto;
-        background: linear-gradient(45deg, #62eef5, #6454f5);
-        display: grid;
-        grid-template-columns: 10% 90%;
-        color: #fff;
-        position: relative;
-        height: 130px;
-    }
-
-    /*헤더 메뉴박스*/
-    #header .open_nav {
-        padding: 10px 20px;
-        font-size: 40px;
-        z-index: 9999;
-
-    }
-
-    #header .close_nav {
-        z-index: 999;
-        position: relative;
-        padding: 10px 20px;
-        font-size: 40px;
-        z-index: 9999;
-        display: none;
-    }
-
-    #header .logo {
-        width: 90%;
-        padding: 10px 5px;
-        font-size: 40px;
-        font-family: 'Fredoka One', cursive;
-    }
-
-    #header .search {
-        width: 100%;
-        position: absolute;
-        bottom: 0%;
-        left: 0;
-        padding: 10px;
-
-    }
-
-    /*헤더 서치박스*/
-    #header .search input {
-        width: 85%;
-        height: 30px;
-    }
-
-    #header .search button {
-        width: 10%;
-        height: 30px;
-    }
-
-    #header .menubox .menuinv {
-        position: fixed;
-        width: 300px;
-        height: 100%;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: rgba(100, 84, 245, 0.5);
-        z-index: 9999;
-        left: -400px;
-        padding-top: 100px;
-    }
-
-    #header .menubox .menuinv a {
-        display: block;
-        font-size: 30px;
-        padding: 20px;
-        text-align: center;
-
-    }
-
-    /*섹션 구역*/
-    #content {
-        min-height: 400px;
-        margin-top: 130px;
-        font-size: 50px;
-    }
-
-    /*mainContent 디자인 */
-
-    /*푸터구역*/
-    #footer {
-        margin: 50px 0;
-        background: #ddd;
-        text-align: center;
-        color: #000;
-        padding: 20px;
-
-    }
-
-    #footer .Privacy {
-        margin: 10px 0;
-    }
-
-    #footer .Privacy>a {
-        display: block;
-        margin: 5px 0;
-        font-weight: bold;
-    }
-
-    #footer .csCenter a {
-        padding: 10px;
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
+#header {
+    height: 130px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
 
 
-    /*quick_menu*/
-    #quick_menu {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        height: 50px;
-    }
+#header .row {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(45deg, #62eef5, #6454f5);
+    display: grid;
+    grid-template-columns: 10% 90%;
+    color: #fff;
+    position: relative;
+    height: 130px;
+}
 
-    #quick_menu .row {
-        display: flex;
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-        background: linear-gradient(45deg, #62eef5, #6454f5)
-    }
+/*헤더 메뉴박스*/
+#header .open_nav {
+    padding: 10px 20px;
+    font-size: 40px;
+    z-index: 9999;
 
-    #quick_menu .row a{
-        width: 33.33%;
-        font-size: 25px;
-        padding: 10px;
-        color: #fff;
-    }
+}
+
+#header .menubox {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(100, 84, 245, 0.3);
+    z-index: 9999;
+    display: none;
+
+}
+
+#header .menubox .menuinv {
+    width: 300px;
+    height: 100%;
+    background: rgba(100, 84, 245, 0.5);
+    padding-top: 100px;
+}
+
+#header .menubox .menuinv a {
+    display: block;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+#header .menubox .close_nav {
+    position: absolute;
+    top: 0;
+    left: 240px;
+    padding: 10px 20px;
+    font-size: 40px;
+    z-index: 9999;
+}
+
+#header .logo {
+    width: 90%;
+    padding: 10px 5px;
+    font-size: 40px;
+    font-family: 'Fredoka One', cursive;
+}
+
+#header .search {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    padding: 10px;
+
+}
+
+/*헤더 서치박스*/
+#header .search input {
+    width: 85%;
+    height: 30px;
+}
+
+#header .search button {
+    width: 10%;
+    height: 30px;
+}
+
+
+/*섹션 구역*/
+#content {
+    min-height: 400px;
+    margin-top: 130px;
+}
+
+#container .mainContent {
+    padding: 10px;
+}
+
+/*공연정보*/
+#container .mainContent .Mshow_info {
+    padding: 30px;
+    background: #277ceb;
+    text-align: center;
+    height: 100px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+/*BEST 공연*/
+#container .best_show {
+    margin-top: 10px;
+    padding: 10px;
+    height: 250px;
+}
+
+#container .best_show .show_box01 {
+    display: flex;
+    overflow: hidden;
+}
+
+#container .best_show h2 {
+    font-size: 20px;
+}
+
+#container .best_show .show_info {
+    width: 50%;
+    padding: 10px;
+}
+
+#container .best_show .show_info img {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#container .best_show .show_info a p {
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+#container .best_show .slick-dots {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    text-align: center;
+    z-index: 99999;
+}
+#container .best_show .slick-dots li {
+    display: inline-block;
+}
+#container .best_show .slick-dots li button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ddd;
+    text-indent: -99999px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+#container .best_show li.slick-active button {
+    background: navy;
+    width: 40px;
+    border-radius: 50px;
+}
+
+
+/*mainContent 디자인 */
+
+/*푸터구역*/
+#footer {
+    margin: 50px 0;
+    background: #ddd;
+    text-align: center;
+    color: #000;
+    padding: 20px;
+
+}
+
+#footer .Privacy {
+    margin: 10px 0;
+}
+
+#footer .Privacy>a {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+#footer .csCenter a {
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+/*quick_menu*/
+#quick_menu {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+}
+
+#quick_menu .row {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(45deg, #62eef5, #6454f5)
+}
+
+#quick_menu .row a {
+    width: 33.33%;
+    font-size: 25px;
+    padding: 10px;
+    color: #fff;
+}
