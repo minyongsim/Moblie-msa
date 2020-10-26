@@ -21,15 +21,7 @@
         $(this).prevAll('.open_nav').show(500)
     })
 
-    //header해더를 스크롤 하면 포지션 픽스트 시키기
-    $(window).scroll(function(){
-        var sct = $(this).scrollTop()
-        if (sct >= 50 && !$('#headeer').hasClass('on')) {
-          $('#header').stop().slideUp(100).stop().slideDown(100).addClass('on')
-        }else if (sct < 50 && $('#header').hasClass('on')) {
-          $('#header').removeClass('on')
-        } 
-      })
+    
 
 
 
