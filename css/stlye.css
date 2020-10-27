@@ -160,13 +160,14 @@
 }
 
 #container .best_show .show_info img {
-    width: 300px;
+    width: 70%;
     margin-bottom: 10px;
 }
 
 #container .best_show .show_info a p {
+    width: 70%;
     text-align: center;
-    padding: 5px;
+
     font-weight: bold;
 }
 #container .best_show .slick-dots {
