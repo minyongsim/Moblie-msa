@@ -1,5 +1,13 @@
 (function(){
-    
+  $('#wrap')
+  .on("click", function () {
+    var url = this.href;
+    $("#container > #content").remove();
+    $("#container").load(url + " #content");
+    return false;
+  });
+
+
     //open_nav를 클릭하면 메뉴 박스 왼쪽에서 나옴
     $('.open_nav').on('click',function(){
         $(this).next().css({
@@ -24,7 +32,7 @@
         dots: true, //동그라미 버튼
         autoplaySpeed: 4500, // 슬라이드 재생 시간
         speed:1000, // 바뀌는 시간
-        slidesToShow: 2, //보여질 슬라이드 수(생략가능)
+        slidesToShow: 1, //보여질 슬라이드 수(생략가능)
         slldesToScroll: 1, //이동 슬라이드 수(생략가능)
         pauseOnHover: true, // 마우스오버시 멈춤여부(생략가능)
         pauseOnDotHover: false, //동그라미 버튼에 호버시 자동실행 멈춤여부
