@@ -1,6 +1,6 @@
 (function(){
   $('#wrap')
-  .on("click", function () {
+  .on("click","#header .menubox .menuinv a,#content .Mshow_info a,.show_category a, #quick_menu a ",function () {
     var url = this.href;
     $("#container > #content").remove();
     $("#container").load(url + " #content");
@@ -27,7 +27,7 @@
         })
       })
 
-      $('.show_box01').slick({
+      $('.show_box').slick({
         autoplay: true, // 자동재생
         dots: true, //동그라미 버튼
         autoplaySpeed: 4500, // 슬라이드 재생 시간
@@ -53,6 +53,47 @@
         }]
 
     })
+
+    var usedata;
+    $.ajax({
+      type: 'GET',
+      url: 'data/data.json',
+      beforeSend: function (xhr) {
+        if (xhr.overrideMimeType) {
+          xhr.overrideMimeType("application/json")
+        }
+      },
+      success: function (data) {
+       usedata = data
+  
+      },
+      error: function (abc) {
+        alert(abc.status + '오류발생')
+      }
+    })
+  
+    $('#container').on('click', '.showContent .show_category a', function (e) {
+      e.preventDefault()
+      var url = this.href;
+      var show = $(this).attr('class')
+      $("#container > #content").remove();
+      $("#container").load(url + " #content", function () {
+        var newContent = '';
+        for (var i in usedata[show]) {
+          newContent += `<li><img src="${usedata[show][i].images}"alt="공연이미지">`
+          newContent += `<div class="text"><h2>${usedata[show][i].name}</h2>`
+          newContent += `<p>${usedata[show][i].type}</p>`
+          newContent += `<p>${usedata[show][i].zone}</p>`
+          newContent += `<p>${usedata[show][i].period}</p>`
+          newContent += `<p>${usedata[show][i].place}</p>`
+          newContent += `<a href="#">예매하러가기</a></div></li>`
+        }
+        $('#content .pushList .ListBox').append(`<ul>${newContent}</ul>`)
+  
+      });
+  
+    })
+  
       
     
 

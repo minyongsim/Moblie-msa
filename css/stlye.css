@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-*{outline: none;}
+* {
+    outline: none;
+}
 
 #onlyMobile {
     position: fixed;
@@ -67,6 +69,7 @@
 
 }
 
+
 #header .menubox .menuinv {
     width: 300px;
     height: 100%;
@@ -74,9 +77,18 @@
     padding-top: 100px;
 }
 
+#header .menubox .menuinv .login>a {
+    background: linear-gradient(45deg, #ff7676, #f54ea2);
+    margin: 20px;
+    border-radius: 5px;
+    position: relative;
+    top: -50px;
+    font-weight: bold;
+}
+
 #header .menubox .menuinv a {
     display: block;
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px;
     text-align: center;
 }
@@ -128,19 +140,6 @@
     padding: 10px;
 }
 
-/*공연정보*/
-#container .mainContent .Mshow_info {
-    padding: 30px;
-    background: #ff7676;
-    text-align: center;
-    height: 100px;
-    font-size: 30px;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 10px;
-}
-
 /*BEST 공연*/
 #container .best_show {
     margin-top: 10px;
@@ -154,10 +153,8 @@
 #container .best_show h2 {
     font-size: 20px;
     margin: 0 10px 10px 10px;
-    background: #ff7676;
-    color: #fff;
+    color: #ff7676;
     padding: 10px;
-    border-radius: 5px;
 }
 
 #container .best_show .show_info {
@@ -171,27 +168,27 @@
     padding: 20px;
 }
 
-#container .best_show .show_box01 .slide1 {
+#container .best_show .show_box .slide1 {
     background: url(../img/m1.jpg);
     background-position: center;
 }
 
-#container .best_show .show_box01 .slide2 {
+#container .best_show .show_box .slide2 {
     background: url(../img/m2.jpg);
     background-position: center;
 }
 
-#container .best_show .show_box01 .slide3 {
+#container .best_show .show_box .slide3 {
     background: url(../img/m3.jpg);
     background-position: center;
 }
 
-#container .best_show .show_box01 .slide4 {
+#container .best_show .show_box .slide4 {
     background: url(../img/m4.jpg);
     background-position: center;
 }
 
-#container .best_show .show_box01 .slide5 {
+#container .best_show .show_box .slide5 {
     background: url(../img/m5.jpg);
     background-position: center;
 }
@@ -233,6 +230,19 @@
     border-radius: 50px;
 }
 
+/*공연정보*/
+#container .mainContent .Mshow_info {
+    padding: 30px;
+    background: #ff7676;
+    text-align: center;
+    height: 100px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px;
+}
+
 /*mypage*/
 .mypage {
     margin-top: 10px;
@@ -251,15 +261,12 @@
     color: #fff;
     line-height: 20px;
     font-weight: bold;
-    
+
 }
-
-
-
 
 /*푸터구역*/
 #footer {
-   margin-bottom: 50px;
+    margin-bottom: 50px;
     background: #ddd;
     text-align: center;
     color: #000;
@@ -277,14 +284,17 @@
     font-weight: bold;
 }
 
-#footer .csCenter .sns{
+#footer .csCenter .sns {
     margin-bottom: 10px;
     font-size: 30px;
 }
 
 
 #footer .csCenter .info p,
-#footer .csCenter .info a {padding: 5px; font-weight: bold;}
+#footer .csCenter .info a {
+    padding: 5px;
+    font-weight: bold;
+}
 
 
 /*quick_menu*/
@@ -308,5 +318,87 @@
     width: 33.33%;
     font-size: 25px;
     padding: 10px;
+    color: #fff;
+}
+
+/*공연정보 카테고리 디자인 */
+.show_category {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.show_category a {
+    padding: 150px 0;
+    background: #ff7676;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 30px;
+}
+
+.show_category a img {
+    width: 50px;
+}
+
+/*서브페이지 */
+.pushList .pushList>h2 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background: linear-gradient(45deg, #ff7676, #f54ea2);
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+}
+
+.pushList .pushList .pushbox {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    margin: 10px 0;
+}
+
+.pushList .pushList .pushbox li {
+    border-radius: 5px;
+    margin: 0 5px;
+    border: 2px solid #ff7676;
+}
+
+.pushList .pushList .pushbox li>img {
+    width: 100%;
+}
+
+.ListBox>h2 {
+    margin: 10px;
+    font-size: 30px;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff7676, #f54ea2);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.ListBox ul li {
+    display: flex;
+    margin: 10px;
+    border: 2px solid #ff7676;
+    border-radius: 5px;
+}
+
+.ListBox ul li img {
+    height: 150px;
+}
+
+.ListBox ul li .text {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.ListBox ul li .text a {
+    background: #ff7676;
+    font-size: 20px;
+    border-radius: 5px;
     color: #fff;
 }
