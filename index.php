@@ -32,7 +32,7 @@
                 </div>
                 <div class="menubox">
                     <div class="menuinv">
-                     <div id="login">   
+                      <div id="login">   
                          <?php if (!$userid) { ?>
                         <div class="inbtn login"> <a href="login_form.php">로그인</a></div>
                         <div class="inbtn join"> <a href="join.html">회원가입</a></div>
@@ -41,7 +41,8 @@
                         <div class="inbtn logout"> <a href="logout.php">로그아웃</a></div>
                         <div class="inbtn my"> <a href="#none">정보수정</a></div>
                         <?php } ?>
-                    </div  class = "menuList">
+                     </div>
+                    <div  class = "menuList">
                         <a href="showList.html">공연정보</a>
                         <a href="#">FAQ</a>
                         <a href="#">공지사항</a>
@@ -50,6 +51,7 @@
                     </div>
                     <div class="close_nav">
                         <a href="#"><i class="fas fa-times"></i><span class="blind">메뉴닫기</span></a>
+                    </div>
                     </div>
                 </div>
                 <div class="logo">

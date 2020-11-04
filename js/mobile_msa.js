@@ -1,6 +1,6 @@
 (function () {
   $('#wrap')
-    .on("click", "#header .menubox .menuinv .menuList a, #login .join a, #content .Mshow_info a,.show_category a, #quick_menu a:nth-child(2) ", function () {
+    .on("click", "#header .menubox .menuList a, #header .menubox #login .join a, #content .Mshow_info a,.show_category a, #quick_menu a:nth-child(2) ", function () {
       var url = this.href;
       $("#container > #content").remove();
       $("#container").load(url + " #content");

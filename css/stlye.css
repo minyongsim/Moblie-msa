@@ -433,7 +433,7 @@
 
 /*회원가입 페이지*/
 #join_box {
-    text-align: center;
+  
 }
 
 #join_box h2 {
@@ -444,7 +444,8 @@
 }
 
 #join_box fieldset {
-    margin-top: 20px;
+  margin: 20px auto ;
+
 }
 
 #join_box fieldset p {
