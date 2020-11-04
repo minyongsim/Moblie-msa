@@ -432,6 +432,12 @@
 }
 
 /*회원가입 페이지*/
+<<<<<<< HEAD
+=======
+#join_box {
+  
+}
+>>>>>>> 6bd565bc6d902afb000fe436dbfe4182ff40b6cb
 
 #join_box h2 {
     font-size: 30px;
@@ -482,5 +488,8 @@
     color: #fff;
     padding: 10px 30px;
     border-radius:5px ;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> 6bd565bc6d902afb000fe436dbfe4182ff40b6cb
 }
