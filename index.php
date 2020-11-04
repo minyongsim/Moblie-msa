@@ -32,14 +32,14 @@
                 </div>
                 <div class="menubox">
                     <div class="menuinv">
-                     <div class="login">   
+                     <div id="login">   
                          <?php if (!$userid) { ?>
-                        <div class="inbtn"> <a href="login_form.php">로그인</a></div>
-                        <div class="inbtn"> <a href="join.html">회원가입</a></div>
+                        <div class="inbtn login"> <a href="login_form.php">로그인</a></div>
+                        <div class="inbtn join"> <a href="join.html">회원가입</a></div>
                          <?php } else { ?>
                         <div class="inBtn"><?php echo $username ?>님 환영합니다.</div>
-                        <div class="inbtn"> <a href="logout.php">로그아웃</a></div>
-                        <div class="inbtn"> <a href="#none">정보수정</a></div>
+                        <div class="inbtn logout"> <a href="logout.php">로그아웃</a></div>
+                        <div class="inbtn my"> <a href="#none">정보수정</a></div>
                         <?php } ?>
                     </div  class = "menuList">
                         <a href="showList.html">공연정보</a>
@@ -69,30 +69,60 @@
 
         </header>
 
-        <div id="content" class="loginContent">
-            
-            <div id="login_box">
-                <h2>로그인</h2>
-                <form name="member_form" method="post" action="login.php">
-                    <fieldset>
-                        <legend>로그인</legend>
-                        <p>
-                            <label for="idtext">아이디</label>
-                            <input type="text" name="id" id="idtext">
-                            <button type="button" onclick="id_check()" class="check">중복체크</button>
-                        </p>
-                        <p>
-                            <label for="pass">비밀번호</label>
-                            <input type="password" name="pass" id="pass">
-                        </p>
-                      
-                    </fieldset>
-                    <button type="button" class="log_in" onclick="login_check()"> 로그인</button>
-                </form>
+        <section id="container">
+            <div id="content" class="mainContent">
+                <div class="alarm">
+                    <a href="#"><img src="img/bell.png" alt="알림이미지">  뮤지컬 영웅 삼성카드 할인 </a>
+                    <a href="#"><img src="img/bell.png" alt="알림이미지">연극 라이어 10월 할인 </a>
+                    <a href="#"><img src="img/bell.png" alt="알림이미지">뮤지컬 캣츠 내한공연 기념 할인</a>
+                    <a href="#"><img src="img/bell.png" alt="알림이미지">뮤지컬 10월 한달 동안 할인</a>
+                </div>
+                <div class="best_show">
+                    <h2>BEST 공연</h2>
+                    <div class="show_box">
+                        <div class="show_info slide1">
+                            <a href="#">
+                                바로 예매하기
+                            </a>
+                        </div>
+                        <div class="show_info slide2">
+                            <a href="#">
+                                바로 예매하기
+                            </a>
+                        </div>
+                       <div class="show_info slide3">
+                            <a href="#">
+                                바로 예매하기
+                            </a>
+                        </div>
+                       <div class="show_info slide4">
+                            <a href="#">
+                                바로 예매하기
+                            </a>
+                        </div>
+                        <div class="show_info slide5">
+                            <a href="#">
+                                바로 예매하기
+                            </a>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="Mshow_info">
+                    <a href="showList.html">
+                        <img src="img/seats.png" alt="공연정보 이미지">
+                         공연정보</a>
+                </div>
+                <div class="mypage">
+                    <a href="#">
+                        <img src="img/tickets.png" alt="티켓조회"> 티켓 조회</a>
+                    <a href="#">
+                      <img src="img/sale.png" alt="할인정보">
+                        할인정보</a>
+                </div>
             </div>
-    
-        </div>
-   
+        </section>
+
 
         <footer id="footer">
             <div class="Privacy">

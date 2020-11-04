@@ -1,6 +1,6 @@
 (function () {
   $('#wrap')
-    .on("click", "#header .menubox .menuinv a,#content .Mshow_info a,.show_category a, #quick_menu a:nth-child(2) ", function () {
+    .on("click", "#header .menubox .menuinv .menuList a, #login .join a, #content .Mshow_info a,.show_category a, #quick_menu a:nth-child(2) ", function () {
       var url = this.href;
       $("#container > #content").remove();
       $("#container").load(url + " #content");
@@ -108,11 +108,67 @@
 
   })
 
-
-
-
-
-
-
-
 })(jQuery)
+
+function join_check() {
+
+  if ( !document.member_form.id.value ) {
+    alert('아이디를 입력하세요!')
+    document.member_form.id.focus()
+    return false
+  }
+
+  if ( !document.member_form.pass.value ) {
+    alert('비밀번호를 입력하세요!')
+    document.member_form.pass.focus()
+    return false
+  }
+
+  if ( !document.member_form.passok.value ) {
+    alert('비밀번호 확인을 입력하세요!')
+    document.member_form.passok.focus()
+    return false
+  }
+
+  if ( !document.member_form.name.value ) {
+    alert('이름을 입력하세요!')
+    document.member_form.name.focus()
+    return false
+  }
+
+  if ( !document.member_form.tel.value ) {
+    alert('전화번호를 입력하세요!')
+    document.member_form.tel.focus()
+    return false
+  }
+  if ( !document.member_form.email.value ) {
+      alert('이메일을 입력하세요!')
+      document.member_form.email.focus()
+      return false
+  }
+  document.member_form.submit()
+
+  }
+
+  function login_check() {
+
+    if ( !document.login_form.id.value ) {
+      alert('아이디를 입력하세요!')
+      document.login_form.id.focus()
+      return false
+    }
+  
+    if ( !document.login_form.pass.value ) {
+      alert('비밀번호를 입력하세요!')
+      document.login_form.pass.focus()
+      return false
+    }
+  
+    document.login_form.submit()
+  
+  }
+
+  function id_check() {
+    // window.open("url", "창제목", "옵션값")
+    window.open("id_check.php?id="+document.member_form.id.value, "", "width=350, height=200, left=300, top=300, scrollbars=no, resizable=yes")
+  }

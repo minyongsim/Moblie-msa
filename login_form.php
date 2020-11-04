@@ -25,21 +25,21 @@
     ?>
 
     <div id="wrap">
-        <header id="header">
+    <header id="header">
             <div class="row">
                 <div class="open_nav">
                     <a href="#"><i class="fas fa-ellipsis-v"><span class="blind">메뉴열기</span></i></a>
                 </div>
                 <div class="menubox">
                     <div class="menuinv">
-                     <div class="login">   
+                     <div id="login">   
                          <?php if (!$userid) { ?>
-                        <div class="inbtn"> <a href="login_form.php">로그인</a></div>
-                        <div class="inbtn"> <a href="join.html">회원가입</a></div>
+                        <div class="inbtn login"> <a href="login_form.php">로그인</a></div>
+                        <div class="inbtn join"> <a href="join.html">회원가입</a></div>
                          <?php } else { ?>
                         <div class="inBtn"><?php echo $username ?>님 환영합니다.</div>
-                        <div class="inbtn"> <a href="logout.php">로그아웃</a></div>
-                        <div class="inbtn"> <a href="#none">정보수정</a></div>
+                        <div class="inbtn logout"> <a href="logout.php">로그아웃</a></div>
+                        <div class="inbtn my"> <a href="#none">정보수정</a></div>
                         <?php } ?>
                     </div  class = "menuList">
                         <a href="showList.html">공연정보</a>
@@ -73,13 +73,12 @@
             
             <div id="login_box">
                 <h2>로그인</h2>
-                <form name="member_form" method="post" action="login.php">
+                <form name="login_form" method="post" action="login.php">
                     <fieldset>
                         <legend>로그인</legend>
                         <p>
                             <label for="idtext">아이디</label>
                             <input type="text" name="id" id="idtext">
-                            <button type="button" onclick="id_check()" class="check">중복체크</button>
                         </p>
                         <p>
                             <label for="pass">비밀번호</label>
